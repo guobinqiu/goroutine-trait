@@ -32,9 +32,9 @@ import (
 //非抢占式：非抢占式让原来正在运行的进程继续运行，直至该进程完成或发生某种事件（如I/O请求），才主动放弃处理机
 func main() {
 	//看源码太累，黑盒测试找规律吧
-	//oneCoreWithoutIO()    //从输出结果看，后面应该有一个队列，每个协程从队列里依次取出来执行。让原来正在运行的协程继续运行，直至该协程完成
-	//multiCoresWithoutIO() //从输出结果看，多核并行后已经看不出队列效果
-	oneCoreWithIO() //发生了io请求，当前协程主动挂起，让其他协程运行
+	//oneCoreWithoutIO()    //从输出结果看，单核并发（concurrency），后面应该有一个队列，每个协程从队列里依次取出来执行。让原来正在运行的协程继续运行，直至该协程完成
+	//multiCoresWithoutIO() //从输出结果看，多核并行（parellel）已经看不出队列效果
+	oneCoreWithIO()         //从输出结果看，发生了io请求，当前协程主动挂起，让其他协程运行
 	//multiCoresWithIO()
 }
 
