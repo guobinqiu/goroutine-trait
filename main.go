@@ -23,7 +23,8 @@ import (
 //P Processor处理器，用来管理和执行Goroutine，对应GOMAXPROCS
 //
 //G-M-P三者的关系
-//P-M 一对一或一对多
+//M   多个
+//P-M 一对其一
 //P-G 一对多
 //https://www.cnblogs.com/secondtonone1/p/11803961.html
 //
