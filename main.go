@@ -23,7 +23,7 @@ import (
 //P Processor处理器，用来管理和执行Goroutine
 //
 //G-M-P三者的关系
-//M-P 一对一
+//P-M 一对一或一对多
 //P-G 一对多
 //https://www.cnblogs.com/secondtonone1/p/11803961.html
 //
