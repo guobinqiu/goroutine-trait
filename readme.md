@@ -5,8 +5,8 @@
 非抢占式：非抢占式让原来正在运行的进程继续运行，直至该进程完成或发生某种事件（如I/O请求），才主动放弃处理机
 
 
+来自src/runtime/proc.go源码
 ```
-//源码 src/runtime/proc.go
 // Goroutine scheduler
 // The scheduler's job is to distribute ready-to-run goroutines over worker threads.
 //
